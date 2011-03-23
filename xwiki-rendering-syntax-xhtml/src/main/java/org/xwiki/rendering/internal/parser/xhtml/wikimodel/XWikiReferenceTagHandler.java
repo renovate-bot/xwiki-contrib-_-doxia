@@ -17,7 +17,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.xwiki.rendering.internal.parser.wikimodel.xhtml;
+package org.xwiki.rendering.internal.parser.xhtml.wikimodel;
 
 import java.util.Collections;
 
@@ -28,10 +28,9 @@ import org.wikimodel.wem.impl.WikiScannerContext;
 import org.wikimodel.wem.xhtml.handler.ReferenceTagHandler;
 import org.wikimodel.wem.xhtml.impl.XhtmlHandler.TagStack;
 import org.wikimodel.wem.xhtml.impl.XhtmlHandler.TagStack.TagContext;
-import org.xwiki.rendering.internal.parser.WikiModelXHTMLParser;
 import org.xwiki.rendering.internal.parser.wikimodel.DefaultXWikiGeneratorListener;
 import org.xwiki.rendering.internal.parser.wikimodel.XWikiGeneratorListener;
-import org.xwiki.rendering.listener.Listener;
+import org.xwiki.rendering.internal.parser.xhtml.WikiModelXHTMLParser;
 import org.xwiki.rendering.listener.MetaData;
 import org.xwiki.rendering.renderer.PrintRenderer;
 import org.xwiki.rendering.renderer.PrintRendererFactory;

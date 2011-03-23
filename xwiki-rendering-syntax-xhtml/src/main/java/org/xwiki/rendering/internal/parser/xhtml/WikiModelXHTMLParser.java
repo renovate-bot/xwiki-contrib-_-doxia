@@ -17,7 +17,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package org.xwiki.rendering.internal.parser;
+package org.xwiki.rendering.internal.parser.xhtml;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,17 +32,17 @@ import org.xwiki.component.manager.ComponentManager;
 import org.xwiki.rendering.block.XDOM;
 import org.xwiki.rendering.internal.parser.wikimodel.AbstractWikiModelParser;
 import org.xwiki.rendering.internal.parser.wikimodel.XWikiGeneratorListener;
-import org.xwiki.rendering.internal.parser.wikimodel.xhtml.XHTMLXWikiGeneratorListener;
-import org.xwiki.rendering.internal.parser.wikimodel.xhtml.XWikiCommentHandler;
-import org.xwiki.rendering.internal.parser.wikimodel.xhtml.XWikiDivisionTagHandler;
-import org.xwiki.rendering.internal.parser.wikimodel.xhtml.XWikiHeaderTagHandler;
-import org.xwiki.rendering.internal.parser.wikimodel.xhtml.XWikiImageTagHandler;
-import org.xwiki.rendering.internal.parser.wikimodel.xhtml.XWikiReferenceTagHandler;
-import org.xwiki.rendering.internal.parser.wikimodel.xhtml.XWikiSpanTagHandler;
-import org.xwiki.rendering.internal.parser.wikimodel.xhtml.XWikiTableDataTagHandler;
+import org.xwiki.rendering.internal.parser.xhtml.wikimodel.XHTMLXWikiGeneratorListener;
+import org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiCommentHandler;
+import org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiDivisionTagHandler;
+import org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiHeaderTagHandler;
+import org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiImageTagHandler;
+import org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiReferenceTagHandler;
+import org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiSpanTagHandler;
+import org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiTableDataTagHandler;
 import org.xwiki.rendering.listener.Listener;
-import org.xwiki.rendering.parser.ResourceReferenceParser;
 import org.xwiki.rendering.parser.ParseException;
+import org.xwiki.rendering.parser.ResourceReferenceParser;
 import org.xwiki.rendering.parser.StreamParser;
 import org.xwiki.rendering.renderer.PrintRendererFactory;
 import org.xwiki.rendering.syntax.Syntax;

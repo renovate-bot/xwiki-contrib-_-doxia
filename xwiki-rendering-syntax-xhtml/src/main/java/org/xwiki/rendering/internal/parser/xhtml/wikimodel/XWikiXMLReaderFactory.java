@@ -1,4 +1,4 @@
-package org.xwiki.rendering.internal.parser.wikimodel.xhtml;
+package org.xwiki.rendering.internal.parser.xhtml.wikimodel;
 
 import javax.xml.parsers.ParserConfigurationException;
 

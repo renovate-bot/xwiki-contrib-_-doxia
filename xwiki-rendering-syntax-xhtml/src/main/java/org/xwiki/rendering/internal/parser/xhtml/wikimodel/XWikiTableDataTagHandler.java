@@ -8,7 +8,7 @@
  * Contributors:
  *     Cognium Systems SA - initial API and implementation
  *******************************************************************************/
-package org.xwiki.rendering.internal.parser.wikimodel.xhtml;
+package org.xwiki.rendering.internal.parser.xhtml.wikimodel;
 
 import org.wikimodel.wem.WikiParameter;
 import org.wikimodel.wem.WikiParameters;
