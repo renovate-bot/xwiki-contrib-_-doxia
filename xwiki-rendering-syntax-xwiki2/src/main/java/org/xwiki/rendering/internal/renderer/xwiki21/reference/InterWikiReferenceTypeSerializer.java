@@ -47,7 +47,7 @@ public class InterWikiReferenceTypeSerializer implements ResourceReferenceTypeSe
      */
     public String serialize(ResourceReference reference)
     {
-        StringBuffer result = new StringBuffer();
+        StringBuilder result = new StringBuilder();
         result.append(reference.getType().getScheme());
         result.append(DefaultResourceReferenceParser.TYPE_SEPARATOR);
         String interWikiAlias = reference.getParameter(InterWikiResourceReference.INTERWIKI_ALIAS);
