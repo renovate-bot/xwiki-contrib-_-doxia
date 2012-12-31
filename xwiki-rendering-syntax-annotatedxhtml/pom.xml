@@ -29,23 +29,16 @@
     <artifactId>xwiki-rendering-syntaxes</artifactId>
     <version>4.5-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-rendering-syntax-xwiki20</artifactId>
-  <name>XWiki Rendering - Syntax - XWiki 2.0</name>
-  <description>XWiki Rendering - Syntax - XWiki 2.0</description>
+  <artifactId>xwiki-rendering-syntax-annotatedxhtml</artifactId>
+  <name>XWiki Rendering - Syntax - Annotated XHTML</name>
+  <description>XWiki Rendering - Syntax - Annotated XHTML</description>
   <properties>
-    <xwiki.clover.targetPercentage>50.6%</xwiki.clover.targetPercentage>
+    <xwiki.clover.targetPercentage>51.4%</xwiki.clover.targetPercentage>
   </properties>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.rendering</groupId>
-      <artifactId>xwiki-rendering-syntax-wikimodel</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <!-- TODO: Remove this depdencency which is only required because of something hardcoded in
-         XWikiSyntaxResourceRenderer -->
-    <dependency>
-      <groupId>org.xwiki.rendering</groupId>
-      <artifactId>xwiki-rendering-syntax-plain</artifactId>
+      <artifactId>xwiki-rendering-syntax-xhtml</artifactId>
       <version>${project.version}</version>
     </dependency>
     <!-- Test Dependencies -->
@@ -57,35 +50,20 @@
     </dependency>
     <dependency>
       <groupId>org.xwiki.rendering</groupId>
-      <artifactId>xwiki-rendering-syntax-event</artifactId>
+      <artifactId>xwiki-rendering-syntax-xhtml</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
+      <type>test-jar</type>
     </dependency>
   </dependencies>
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <executions>
-          <execution>
-            <goals>
-              <goal>test-jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <configuration>
           <excludes>
-            org/xwiki/rendering/internal/renderer/xwiki20/XWikiSyntaxEscapeWikiPrinter.java,
-            org/xwiki/rendering/internal/renderer/xwiki20/XWikiSyntaxMacroRenderer.java,
-            org/xwiki/rendering/internal/renderer/xwiki20/XWikiSyntaxChainingRenderer.java,
-            org/xwiki/rendering/internal/renderer/xwiki20/XWikiSyntaxEscapeHandler.java,
-            org/xwiki/rendering/internal/renderer/xwiki20/XWikiSyntaxImageRenderer.java,
-            org/xwiki/rendering/internal/renderer/xwiki20/reference/XWikiSyntaxResourceRenderer.java,
+            org/xwiki/rendering/internal/renderer/xhtml/XHTMLMacroRenderer.java
           </excludes>
         </configuration>
       </plugin>
