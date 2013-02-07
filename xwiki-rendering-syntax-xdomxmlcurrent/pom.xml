@@ -33,31 +33,13 @@
   <name>XWiki Rendering - Syntax - XDOM+XML Current</name>
   <description>XML/Reflexion based representation synchronized on current events</description>
   <properties>
-    <xwiki.jacoco.instructionRatio>0</xwiki.jacoco.instructionRatio>
-    <xwiki.checkstyle.skip>true</xwiki.checkstyle.skip>
+    <xwiki.clover.targetPercentage>0%</xwiki.clover.targetPercentage>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.xwiki.commons</groupId>
-      <artifactId>xwiki-commons-properties</artifactId>
-      <version>${commons.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.xwiki.commons</groupId>
-      <artifactId>xwiki-commons-xml</artifactId>
-      <version>${commons.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.thoughtworks.xstream</groupId>
-      <artifactId>xstream</artifactId>
+      <groupId>org.xwiki.rendering</groupId>
+      <artifactId>xwiki-rendering-xml</artifactId>
+      <version>${project.version}</version>
     </dependency>
   </dependencies>
 </project>

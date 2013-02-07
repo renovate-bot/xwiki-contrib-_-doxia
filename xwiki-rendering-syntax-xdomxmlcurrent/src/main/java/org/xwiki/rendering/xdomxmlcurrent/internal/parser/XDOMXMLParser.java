@@ -27,6 +27,7 @@ import org.xwiki.rendering.syntax.Syntax;
  * XDOM+XML stream based parser.
  * 
  * @version $Id$
+ * @since 3.3M1
  */
 @Component("xdom+xml/current")
 public class XDOMXMLParser extends AbstractParser

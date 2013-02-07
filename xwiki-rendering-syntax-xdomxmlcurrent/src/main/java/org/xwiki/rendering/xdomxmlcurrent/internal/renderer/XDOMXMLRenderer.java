@@ -19,30 +19,28 @@
  */
 package org.xwiki.rendering.xdomxmlcurrent.internal.renderer;
 
-import java.lang.reflect.Proxy;
-
 import javax.inject.Inject;
 
 import org.xwiki.component.annotation.Component;
-import org.xwiki.properties.ConverterManager;
 import org.xwiki.rendering.internal.renderer.xml.AbstractRenderer;
-import org.xwiki.rendering.listener.Listener;
-import org.xwiki.rendering.listener.descriptor.ListenerDescriptorManager;
 import org.xwiki.rendering.renderer.xml.ContentHandlerStreamRenderer;
 import org.xwiki.rendering.syntax.Syntax;
-import org.xwiki.rendering.xdomxmlcurrent.internal.parameter.ParameterManager;
+import org.xwiki.rendering.xml.internal.serializer.XMLSerializerFactory;
 
+/**
+ * Current version of the XDOM+XML renderer.
+ * 
+ * @version $Id$
+ * @since 3.3M1
+ */
 @Component("xdom+xml/current")
 public class XDOMXMLRenderer extends AbstractRenderer
 {
+    /**
+     * The actual XML serializer factory.
+     */
     @Inject
-    private ParameterManager parameterManager;
-
-    @Inject
-    private ListenerDescriptorManager descriptorManager;
-
-    @Inject
-    private ConverterManager converter;
+    private XMLSerializerFactory serializerFactory;
 
     @Override
     public Syntax getSyntax()
@@ -53,13 +51,6 @@ public class XDOMXMLRenderer extends AbstractRenderer
     @Override
     protected ContentHandlerStreamRenderer createContentHandlerStreamRenderer()
     {
-        XDOMXMLChainingStreamRenderer handler =
-            new XDOMXMLChainingStreamRenderer(this.parameterManager,
-                this.descriptorManager.getListenerDescriptor(Listener.class), this.converter);
-        ContentHandlerStreamRenderer instance =
-            (ContentHandlerStreamRenderer) Proxy.newProxyInstance(ContentHandlerStreamRenderer.class.getClassLoader(),
-                new Class[] {ContentHandlerStreamRenderer.class}, handler);
-
-        return instance;
+        return new XDOMXMLChainingStreamRenderer(this.serializerFactory);
     }
 }
