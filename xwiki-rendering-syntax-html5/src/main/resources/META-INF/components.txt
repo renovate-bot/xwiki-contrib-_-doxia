@@ -1,5 +1,0 @@
-org.xwiki.rendering.internal.parser.html5.HTML5Parser
-org.xwiki.rendering.internal.renderer.html5.HTML5BlockRenderer
-org.xwiki.rendering.internal.renderer.html5.HTML5Renderer
-org.xwiki.rendering.internal.renderer.html5.HTML5RendererFactory
-org.xwiki.rendering.internal.html5.HTML5SyntaxProvider

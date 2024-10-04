@@ -1,1 +1,0 @@
-<p><tt><span data-xwiki-translated-attribute-a="b">monospace</span></tt></p>
